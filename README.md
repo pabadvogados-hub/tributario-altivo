@@ -70,4 +70,6 @@ Ele **não calcula a faixa A/B/C/D**, porque a fórmula da PGFN não é pública
 ## Requisitos
 
 Python 3.10 ou mais novo, só a biblioteca padrão. O banco de leis já vem pronto (`leis/banco_leis.db`).
+O raio-x por CNPJ lê o trimestre inteiro da PGFN (cerca de 8 GB de CSV). Cada consulta leva de 20 a 25 minutos,
+então rode antes da reunião.
 Para os agentes: [Claude Code](https://claude.com/claude-code) aberto na pasta do repositório.

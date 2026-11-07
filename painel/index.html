@@ -1,27 +1,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PAB Tributário</title>
+<title>Ribeiro &amp; Janeiro Tributário</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: trilho de telas à esquerda + palco que troca de tela com deslize; cada frente tem sua cor */
+/* Identidade Ribeiro & Janeiro Advogados (@jrradvogados): preto, dourado, marinho e cobre.
+   Escuro é o padrão, como no Instagram; o botão do rodapé troca para o claro. */
 :root{
-  --bg:#f3f5fa; --panel:#ffffff; --panel-2:#eef1f8; --ink:#101a33; --ink-2:#4a5878; --line:#d9dfec;
-  --blue:#2457e6; --amber:#e08a00; --coral:#e2543c; --teal:#0f9c8c; --violet:#7a4be0; --green:#2f9d4f; --rose:#d13f86;
-  --warn:#d98400; --ok:#1f9a55; --crit:#d23b3b;
-  --tint:.10;
+  --bg:#0b0d0c; --panel:#131614; --panel-2:#1b1f1c; --ink:#f3eee4; --ink-2:#aaa395; --line:#2b2e2a;
+  --gold:#d4ab5e; --navy:#041f3c; --copper:#a07048;
+  --blue:#d4ab5e; --amber:#e3bd72; --coral:#c98a5c; --teal:#86a9cf; --violet:#6f8fe0; --green:#97b57f; --rose:#dca27c;
+  --warn:#e3b04f; --ok:#7fc08a; --crit:#e5675a;
+  --tint:.14; color-scheme:dark;
   --f-display:"Archivo",system-ui,sans-serif; --f-body:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
   --r:12px;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0b1226; --panel:#111b36; --panel-2:#16224a; --ink:#e8edfb; --ink-2:#97a5c9; --line:#26345e;
-  --blue:#5f8bff; --amber:#ffb23f; --coral:#ff7a62; --teal:#33d1bd; --violet:#a888ff; --green:#5dd486; --rose:#ff6fb1;
-  --warn:#ffb23f; --ok:#5dd486; --crit:#ff6b6b; --tint:.16; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0b1226; --panel:#111b36; --panel-2:#16224a; --ink:#e8edfb; --ink-2:#97a5c9; --line:#26345e;
-  --blue:#5f8bff; --amber:#ffb23f; --coral:#ff7a62; --teal:#33d1bd; --violet:#a888ff; --green:#5dd486; --rose:#ff6fb1;
-  --warn:#ffb23f; --ok:#5dd486; --crit:#ff6b6b; --tint:.16; color-scheme:dark}
+:root[data-theme="light"]{
+  --bg:#f6f3ec; --panel:#ffffff; --panel-2:#f1ece1; --ink:#0d1a2c; --ink-2:#5b6170; --line:#e3dccd;
+  --gold:#a8792f; --navy:#041f3c; --copper:#a07048;
+  --blue:#a8792f; --amber:#b5832a; --coral:#a4603a; --teal:#1f5487; --violet:#2a4596; --green:#4d7a3a; --rose:#a5583f;
+  --warn:#b07a12; --ok:#2f7d4a; --crit:#b8392f; --tint:.10; color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark}}
+:root[data-theme="dark"]{color-scheme:dark}
 *{box-sizing:border-box}
 html,body{height:100%}
 body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body);margin:0;overflow-x:hidden}
@@ -32,8 +33,9 @@ button{font:inherit;color:inherit}
 /* trilho */
 .rail{position:sticky;top:env(safe-area-inset-top,0px);height:100vh;display:flex;flex-direction:column;gap:4px;padding:20px 14px 20px max(14px,env(safe-area-inset-left,0px));border-right:1px solid var(--line);background:var(--panel)}
 .brand{display:flex;align-items:center;gap:10px;padding:6px 8px 18px}
-.brand-mark{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:conic-gradient(from 200deg,var(--blue),var(--violet),var(--coral),var(--amber),var(--teal),var(--blue));color:#fff;font:800 13px/1 var(--f-display);letter-spacing:.02em}
-.brand b{font:750 16px/1.1 var(--f-display);font-stretch:112%;display:block}
+.brand-mark{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#0a2d55,var(--navy) 70%);box-shadow:0 0 0 2px var(--panel),0 0 0 3px color-mix(in srgb,var(--gold) 55%,transparent);color:#c98a5c;font:800 14px/1 var(--f-display);font-stretch:85%;letter-spacing:.02em;flex:none}
+.brand b{font:800 15px/1.1 var(--f-display);font-stretch:90%;text-transform:uppercase;letter-spacing:.01em;display:block}
+.ouro{color:var(--gold)}
 .brand small{color:var(--ink-2);font-size:12px}
 .nav{display:flex;flex-direction:column;gap:2px}
 .nav button{all:unset;cursor:pointer;display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:9px;color:var(--ink-2);font-weight:500;font-size:14px;transition:background .2s,color .2s}
@@ -56,8 +58,8 @@ button{font:inherit;color:inherit}
 @keyframes sobe{from{opacity:.001;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.screen,.screen > *{animation:none!important}}
 .eyebrow{font:600 12px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--c,var(--blue));display:flex;align-items:center;gap:8px}
-h1{font:780 clamp(30px,5vw,50px)/1.02 var(--f-display);font-stretch:118%;letter-spacing:-.01em;margin:12px 0 10px;text-wrap:balance}
-h2{font:720 22px/1.15 var(--f-display);font-stretch:110%;margin:0 0 12px;text-wrap:balance}
+h1{font:800 clamp(28px,4.6vw,48px)/1.02 var(--f-display);font-stretch:86%;text-transform:uppercase;letter-spacing:-.005em;margin:12px 0 12px;text-wrap:balance}
+h2{font:760 21px/1.15 var(--f-display);font-stretch:94%;margin:0 0 12px;text-wrap:balance}
 h3{font:650 16px/1.25 var(--f-body);margin:0}
 .lead{font-size:17px;color:var(--ink-2);max-width:64ch;margin:0 0 26px}
 .grid{display:grid;gap:14px}
@@ -73,7 +75,8 @@ h3{font:650 16px/1.25 var(--f-body);margin:0}
 .big{font:780 40px/1 var(--f-display);font-stretch:115%;color:var(--c);font-variant-numeric:tabular-nums}
 .pill{display:inline-flex;align-items:center;gap:6px;font:600 11.5px/1 var(--f-mono);letter-spacing:.04em;padding:6px 9px;border-radius:99px;background:color-mix(in srgb,var(--c) calc(var(--tint)*140%),transparent);color:var(--c);white-space:nowrap}
 .pill.warn{--c:var(--warn)}.pill.ok{--c:var(--ok)}.pill.crit{--c:var(--crit)}
-.hero{position:relative;border-radius:18px;padding:34px 30px;overflow:hidden;background:var(--panel);border:1px solid var(--line)}
+.hero{position:relative;border-radius:18px;padding:34px 30px;overflow:hidden;background:radial-gradient(120% 140% at 100% 0%,color-mix(in srgb,var(--navy) 85%,transparent),transparent 60%),var(--panel);border:1px solid color-mix(in srgb,var(--gold) 30%,var(--line))}
+:root[data-theme="light"] .hero{background:radial-gradient(120% 140% at 100% 0%,color-mix(in srgb,var(--gold) 14%,transparent),transparent 60%),var(--panel)}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.9;pointer-events:none}
 .hero > *:not(canvas){position:relative}
 /* fases */
@@ -236,12 +239,12 @@ th{font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;col
 
 <div class="app">
   <aside class="rail" aria-label="Telas">
-    <div class="brand"><div class="brand-mark" aria-hidden="true">PAB</div><div><b>PAB Tributário</b><small>Transação na PGFN</small></div></div>
+    <div class="brand"><div class="brand-mark" aria-hidden="true">JR</div><div><b>Ribeiro &amp; Janeiro</b><small>Núcleo tributário · PGFN</small></div></div>
     <button class="busca-btn" type="button" data-busca><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar<kbd>Ctrl K</kbd></button>
     <nav class="nav" id="nav"></nav>
     <div class="rail-foot">
       <button class="theme" id="tema" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span>Claro / escuro</span></button>
-      <small class="muted">Versão 07/11/2026 · base: Mentoria CRT</small>
+      <small class="muted">Feito para Altivo Ribeiro · 07/11/2026</small>
     </div>
   </aside>
   <div style="min-width:0">
@@ -273,14 +276,14 @@ const TELAS = [
   {id:'teses', nome:'Banco de teses', cor:C.rose, count:1, g:'Base jurídica'},
   {id:'leis', nome:'Banco de leis', cor:C.violet, count:1, g:'Base jurídica'},
   {id:'motor', nome:'Motor de leads', cor:C.teal, g:'Ferramentas'},
-  {id:'ferramentas', nome:'Ferramentas do PAB', cor:C.green, g:'Ferramentas'},
+  {id:'ferramentas', nome:'Ferramentas', cor:C.green, g:'Ferramentas'},
   {id:'decisoes', nome:'Decisões e 90 dias', cor:C.blue, count:9, g:'Plano'},
 ];
 
 const POPS = [
  {id:'pop-com-01', cod:'COM-01', area:'Comercial', cor:C.amber, nome:'Primeiro contato e cadência', executa:'Robô SDR e SDR', termina:'R1 agendada com os 7 campos, ou lead em nutrição no 8º toque', tempo:'até 15 dias',
   passos:[
-   ['Responder em até 5 minutos', 'O robô faz o primeiro toque e a SDR assume em seguida. A primeira frase diz que é o PAB Advogados.'],
+   ['Responder em até 5 minutos', 'O robô faz o primeiro toque e a SDR assume em seguida. A primeira frase diz o nome do escritório.'],
    ['Seguir a cadência de 8 toques', 'Formatos alternados:', ['D0 texto','D1 áudio','D2 ligação e aviso escrito','D4 áudio com mini-diagnóstico público','D6 prova social e convite','D8 ligação','D11 áudio de honestidade ("faz sentido continuar?")','D15 despedida e nutrição']],
    ['Escrever cada mensagem em 4 partes', 'Nome, a dor do lead, o valor do diagnóstico e o próximo passo com dia e hora. O convite oferece duas opções: "hoje à tarde ou amanhã de manhã?".'],
    ['Preencher os 7 campos no card', 'CNPJ, valor da dívida, regime, situação, gatilho, quem decide e reunião confirmada.'],
@@ -289,12 +292,12 @@ const POPS = [
   ]},
  {id:'pop-com-02', cod:'COM-02', area:'Comercial', cor:C.amber, nome:'Agendamento e confirmação da R1', executa:'SDR', termina:'Lead na reunião ou reagendado', tempo:'D-1 a 2h antes',
   passos:[
-   ['Marcar no Google Meet', 'Pelo marcar_reuniao_cliente.py, com convite automático para o lead e para o Weverton.'],
+   ['Marcar no Google Meet', 'Pela agenda do escritório, com convite automático para o lead e para o closer.'],
    ['Confirmar três vezes', 'Ao agendar, na véspera e de 1 a 2 horas antes.'],
    ['Recuperar o no-show no mesmo dia', 'No segundo contato, perguntar "qual o melhor dia e período?".'],
    ['Deixar a consulta pública no card', 'Dívida ativa, execuções e situação no Simples, para o closer abrir na R1.']
   ]},
- {id:'pop-com-03', cod:'COM-03', area:'Comercial', cor:C.amber, nome:'R1: diagnóstico e venda do parecer', executa:'Closer (Weverton)', termina:'Parecer pago, ou retorno marcado em 24h', tempo:'20 minutos',
+ {id:'pop-com-03', cod:'COM-03', area:'Comercial', cor:C.amber, nome:'R1: diagnóstico e venda do parecer', executa:'Closer (sócio)', termina:'Parecer pago, ou retorno marcado em 24h', tempo:'20 minutos',
   passos:[
    ['Rapport', 'No máximo 5 minutos.'],
    ['Situação e problema', 'Mostrar na tela a consulta pública: inscrições, execução e CAPAG presumida.'],
@@ -303,14 +306,14 @@ const POPS = [
    ['Vender o parecer', 'Analogia do médico: sem exame não há receita. Prazo de 24 a 48 horas. O valor é abatido da 1ª parcela se fechar.'],
    ['Fechar o dia', 'Mover o card, registrar dores e desejos, pedir a procuração no e-CAC e acionar o OP-01.']
   ]},
- {id:'pop-com-04', cod:'COM-04', area:'Comercial', cor:C.amber, nome:'R2: proposta e fechamento', executa:'Closer (Weverton)', termina:'Contrato assinado no ZapSign, ou retorno em 48h', tempo:'só com parecer aprovado',
+ {id:'pop-com-04', cod:'COM-04', area:'Comercial', cor:C.amber, nome:'R2: proposta e fechamento', executa:'Closer (sócio)', termina:'Contrato assinado na assinatura digital, ou retorno em 48h', tempo:'só com parecer aprovado',
   passos:[
    ['Apresentar os três pontos', 'O passivo real (PGFN e Receita), a CAPAG com o desconto possível, e a economia em reais.'],
    ['Apresentar a proposta', 'Valor fixo parcelado mais êxito sobre o desconto real. Mostrar o retorno: economia dividida pelo honorário.'],
    ['Responder às objeções', '', ['"É caro": o retorno com os números do parecer','"Não tenho para o honorário": o fixo é parcelado e o êxito vem depois do desconto confirmado','"Meu contador cuida": reunião a três','"Isso é golpe?": canais oficiais, nada é pago a intermediário']],
-   ['Fechar ou descobrir a objeção', 'Se aceitar, o contrato vai no ZapSign na hora. Se disser "vou pensar", achar a objeção real antes de encerrar.'],
+   ['Fechar ou descobrir a objeção', 'Se aceitar, o contrato vai para assinatura digital na hora. Se disser "vou pensar", achar a objeção real antes de encerrar.'],
    ['Passar ao operacional', 'Lançar os honorários no financeiro, criar a pasta no Drive e acionar o OP-02.']
-  ], nota:'Desconto e condições fora da tabela são decisão do Weverton. Nenhum robô ou SDR negocia preço.'},
+  ], nota:'Desconto e condições fora da tabela são decisão do sócio responsável. Nenhum robô ou SDR negocia preço.'},
  {id:'pop-op-01', cod:'OP-01', area:'Operacional', cor:C.teal, nome:'Procuração e levantamento do passivo', executa:'Analista fiscal', termina:'Relatório do agente de passivo fiscal na pasta do cliente', tempo:'cerca de 1h20',
   passos:[
    ['Criar a pasta no Drive', 'Com as subpastas 01 - Documentos Fiscais, 02 - Relatórios e 03 - Petições.'],
@@ -319,12 +322,12 @@ const POPS = [
    ['Coletar no Regularize', 'Cerca de 40 min:', ['Notificações','Relatório Consolidado da dívida ativa','Negociações no SISPAR','Simulação de adesão em PDF com data e hora','CAPAG: faixa e vetores']],
    ['Rodar o agente de passivo fiscal', 'Com os PDFs. O relatório vai para 02 - Relatórios.']
   ]},
- {id:'pop-op-02', cod:'OP-02', area:'Operacional', cor:C.teal, nome:'Análise jurídica e parecer', executa:'Advogado(a) tributário(a)', termina:'Parecer aprovado pela Dra. Pamella', tempo:'48h após o pagamento',
+ {id:'pop-op-02', cod:'OP-02', area:'Operacional', cor:C.teal, nome:'Análise jurídica e parecer', executa:'Advogado(a) tributário(a)', termina:'Parecer aprovado pelo responsável técnico', tempo:'48h após o pagamento',
   passos:[
    ['Analisar nesta ordem', '', ['Prescrição (CTN art. 174; Tema 566 do STJ para a intercorrente)','Decadência','Nulidades da CDA','Impedimento de 2 anos por transação rescindida (art. 18 da Portaria 6.757)','Elegibilidade ao edital vigente','CAPAG presumida contra a efetiva','Execuções fiscais','Riscos penais e de redirecionamento aos sócios']],
    ['Decidir a estratégia pela árvore', 'A medida decorre do impedimento encontrado (tabela abaixo).'],
    ['Escrever o parecer no timbrado', 'Passivo, CAPAG, análise, elegibilidade, estratégia com cronograma e três cenários de desconto e parcela.'],
-   ['Revisar e aprovar', 'Valentina revisa, a Dra. Pamella aprova e o closer marca a R2.']
+   ['Revisar e aprovar', 'Um segundo advogado (ou o agente de IA) revisa, o responsável técnico aprova e o closer marca a R2.']
   ], arvore:[
    ['Débito da Receita vencido há mais de 90 dias, sem dívida ativa','OP-03: remessa à PGFN'],
    ['Impedimento de 2 anos ativo','Transação bloqueada. Avaliar negócio jurídico processual ou parcelamento em 60x'],
@@ -350,7 +353,7 @@ const POPS = [
    ['Montar laudo e pedido', 'Modelo da pasta 11 do Drive, no timbrado.'],
    ['Protocolar no Regularize', 'Negociar Dívida, Outros Serviços, Revisão de Capacidade de Pagamento.'],
    ['Antecipar as exigências', 'Fluxo de caixa detalhado, distribuição de lucros de 2 anos, mútuos e grupo econômico.']
-  ], nota:'Só protocolar com o ganho de faixa confirmado e a aprovação da Dra. Pamella. Julgado o pedido, um novo só cabe com fato superveniente ou mudança substancial da CAPAG presumida (art. 34-B, Portaria PGFN 6.757/2022).'},
+  ], nota:'Só protocolar com o ganho de faixa confirmado e a aprovação do responsável técnico. Julgado o pedido, um novo só cabe com fato superveniente ou mudança substancial da CAPAG presumida (art. 34-B, Portaria PGFN 6.757/2022).'},
  {id:'pop-op-05', cod:'OP-05', area:'Operacional', cor:C.teal, nome:'Adesão à transação', executa:'Advogado(a)', termina:'Adesão feita e 1ª parcela no controle', tempo:'no dia da simulação aprovada',
   passos:[
    ['Conferir o edital no dia', 'Edital vigente, data de corte, teto e entrada, no Regularize.'],
@@ -378,7 +381,7 @@ const FLUXO = [
  {fase:'2. Parecer e contrato', cor:C.teal, passos:[
    {n:'Levantamento', d:'e-CAC e Regularize', pop:'pop-op-01'},
    {n:'Parecer jurídico', d:'em até 48h', pop:'pop-op-02'},
-   {n:'Aprovação', d:'Pamella e Valentina', pop:'pop-op-02'},
+   {n:'Aprovação', d:'responsável técnico', pop:'pop-op-02'},
    {n:'R2 e proposta', d:'closer', pop:'pop-com-04'}]},
  {fase:'3. Executar', cor:C.violet, passos:[
    {n:'Assinou?', d:'não: retorno em 48h', dec:1, pop:'pop-com-04'},
@@ -392,14 +395,14 @@ const FLUXO = [
 
 const DECISOES = [
  'Tabela de preço única: parecer, valor fixo, êxito e acompanhamento',
- 'Quem assina tecnicamente: Dra. Pamella sozinha, ou contratar advogado(a) tributário(a)',
- 'Quem é a SDR do tributário (Marcella? Rafaella já recebe cerca de 94% dos leads trabalhistas)',
+ 'Quem assina tecnicamente: um sócio, ou contratar advogado(a) tributário(a)',
+ 'Quem é a SDR do tributário, e quantos leads ela consegue atender por dia',
  'Quem faz a coleta no e-CAC e o controle mensal: alguém da equipe ou contratação',
  'Texto único sobre desconto para o marketing ("até 70%" só como teto legal)',
  'Validade da procuração no e-CAC: 1 ano ou 5 anos',
  'Competência do mandado de segurança de remessa: Brasília ou a sede do cliente',
- 'Contrato: tirar a penhora de 30% da remuneração e o uso do nome do cliente sem consentimento específico',
- 'Se a regra da mentoria "pedir sempre CAPAG D" vale aqui, ou se cada caso é avaliado'
+ 'Contrato: cláusulas de êxito, rescisão e uso do nome do cliente revisadas',
+ 'Se a regra "pedir sempre CAPAG D" vale aqui, ou se cada caso é avaliado'
 ];
 
 const KIT = [
@@ -500,9 +503,9 @@ function render(){
 const VIEWS = {
  inicio(){ return `
   <div class="hero" style="--c:var(--blue)"><canvas id="ondas" aria-hidden="true"></canvas>
-    <div class="eyebrow"><span class="dot" style="--c:var(--blue)"></span>Produto novo · Núcleo tributário</div>
-    <h1>Negociar a dívida federal da empresa com a PGFN</h1>
-    <p class="lead">A entrada é um parecer pago. O contrato junta um valor fixo parcelado com êxito sobre a economia real. Tudo roda nas ferramentas que o PAB já tem.</p>
+    <div class="eyebrow"><span class="dot" style="--c:var(--blue)"></span>Ribeiro &amp; Janeiro Advogados · Núcleo tributário</div>
+    <h1>Negociar a dívida federal da empresa <span class="ouro">com a PGFN</span></h1>
+    <p class="lead">A entrada é um parecer pago. O contrato junta um valor fixo parcelado com êxito sobre a economia real. Tudo roda com o kit deste repositório e ferramentas comuns de escritório.</p>
     <div class="filters"><button class="btn" type="button" data-ir="kit" style="--c:var(--green)">Ver o kit ${ico.seta}</button><button class="btn" type="button" data-ir="fluxo" style="--c:var(--teal)">Ver o fluxo ${ico.seta}</button><button class="btn" type="button" data-ir="capag" style="--c:var(--amber)">Avaliar uma CAPAG ${ico.seta}</button></div>
   </div>
   <div class="grid g4 section">
@@ -537,16 +540,16 @@ const VIEWS = {
 
  organograma(){
   const papeis = [
-   ['Comercial', C.amber, [['Robô SDR tributário','primeiro toque em 5 min'],['SDR','Marcella (a confirmar)',1],['Marketing','Rafael: listas e anúncios']]],
-   ['Operacional tributário', C.teal, [['Advogado(a) tributário(a)','a contratar ou Pamella',1],['Analista fiscal','e-CAC e Regularize',1],['Controle de parcelas','farol mensal (OP-06)',1],['Valentina (IA)','revisa parecer e peças']]],
-   ['Apoio e sistemas', C.green, [['Financeiro','Daniela: honorários e êxito'],['Agente de passivo fiscal','lê os PDFs e gera o relatório'],['Agentes da equipe','Lua, Maya, Neo e Sol']]]];
+   ['Comercial', C.amber, [['Robô SDR tributário','primeiro toque em 5 min'],['SDR','a definir',1],['Marketing','listas do motor e anúncios']]],
+   ['Operacional tributário', C.teal, [['Advogado(a) tributário(a)','a contratar ou um sócio',1],['Analista fiscal','e-CAC e Regularize',1],['Controle de parcelas','farol mensal (OP-06)',1],['Agente peca-tributaria','minuta de parecer e peças']]],
+   ['Apoio e sistemas', C.green, [['Financeiro','honorários e êxito'],['Relatório de passivo (ia/)','lê os PDFs e gera o relatório'],['Agente avaliador-capag','decide se pede a revisão']]]];
   return `
   <div class="eyebrow">Quem faz o quê</div>
   <h1>Três frentes sob a direção, quatro cargos sem dono</h1>
-  <p class="lead">Contorno laranja tracejado = cargo a definir ou a contratar. Até lá, a Dra. Pamella acumula a parte técnica.</p>
+  <p class="lead">Contorno laranja tracejado = cargo a definir ou a contratar. Até lá, o responsável técnico acumula a parte técnica.</p>
   <div class="org-top">
-    <div class="card tinted" style="--c:var(--blue)"><h3>Weverton (Tom)</h3><span class="muted">dono do produto e closer</span></div>
-    <div class="card tinted" style="--c:var(--violet)"><h3>Dra. Pamella</h3><span class="muted">responsável técnica · OAB/SP 341.431</span></div>
+    <div class="card tinted" style="--c:var(--blue)"><h3>Sócio comercial</h3><span class="muted">dono do produto e closer</span></div>
+    <div class="card tinted" style="--c:var(--violet)"><h3>Responsável técnico(a)</h3><span class="muted">assina pareceres e peças</span></div>
   </div>
   <div class="org-link" aria-hidden="true"></div>
   <div class="grid g3">${papeis.map(([n,c,rs])=>`<div class="card tinted" style="--c:${c}"><div class="eyebrow" style="margin-bottom:12px"><span class="dot"></span>${n}</div><div class="grid" style="gap:8px">${rs.map(r=>`<div class="role${r[2]?' open':''}"><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>`).join('')}</div></div>`).join('')}</div>`; },
@@ -556,17 +559,17 @@ const VIEWS = {
   return `
   <div class="eyebrow">Departamento comercial</div>
   <h1>Duas reuniões: a R1 vende o parecer, a R2 vende o contrato</h1>
-  <p class="lead">Aqui há proposta e agendamento, ao contrário do trabalhista, porque quem decide é o sócio da empresa, muitas vezes junto com o contador.</p>
-  <h2>Quadro "PAB Tributário" no CRM</h2>
+  <p class="lead">Aqui há proposta e duas reuniões porque quem decide é o sócio da empresa, muitas vezes junto com o contador.</p>
+  <h2>Quadro "Tributário" no CRM</h2>
   <div class="funil">${etapas.map((e,i)=>`<span><b>${String(i+1).padStart(2,'0')}</b>${e}</span>`).join('')}</div>
-  <p class="muted" style="font-size:13px">Cada card tem uma dona (atendente_email), como no PAB Leads e no GR. Card perdido nunca é apagado.</p>
+  <p class="muted" style="font-size:13px">Cada card tem um dono: quem atende o lead. Card perdido nunca é apagado.</p>
   <div class="section"><h2>Cadência de 8 toques</h2><div class="cad">${cad.map(([d,t])=>`<div class="t"><b>${d}</b>${t}</div>`).join('')}</div></div>
   <div class="section grid g2">
     <div class="card"><h2>Papéis</h2><div class="tbl" style="border:0"><table><tbody>
       <tr><td><b>Robô SDR</b></td><td>primeiro toque, triagem, move o card. Não fala de valor.</td></tr>
       <tr><td><b>SDR</b></td><td>cadência, qualificação, agenda e confirma a R1. Não fecha.</td></tr>
       <tr><td><b>Closer</b></td><td>R1 e R2, vende o parecer, negocia e fecha.</td></tr>
-      <tr><td><b>Dra. Pamella</b></td><td>aprova parecer e estratégia antes da R2.</td></tr>
+      <tr><td><b>Responsável técnico</b></td><td>aprova parecer e estratégia antes da R2.</td></tr>
       <tr><td><b>Marketing</b></td><td>listas do Motor PGFN, criativos, campanhas.</td></tr></tbody></table></div></div>
     <div class="card"><h2>Os 7 campos antes da R1</h2><ul class="check">${['CNPJ','Valor aproximado da dívida','Regime: Simples, Presumido ou Real','Situação: CDA, execução, parcelamento, citação','Gatilho: CND, licitação, crédito, penhora','Quem decide: sócio, cônjuge ou contador','Reunião com data e hora confirmadas'].map(x=>`<li><span class="dot" style="--c:var(--amber);margin-top:6px"></span>${x}</li>`).join('')}</ul></div>
   </div>
@@ -606,7 +609,7 @@ const VIEWS = {
     <div class="card"><h2>Para adaptar ao seu escritório</h2><ul style="margin:0;padding-left:18px;font-size:14px">
       <li><span class="mono">ia/system_prompt_tributarista.md</span>: trocar {{ESCRITORIO}}, {{ADVOGADOS_RESPONSAVEIS}} e {{CIDADE_UF}}.</li>
       <li><span class="mono">motor/motor_autonomo.py</span>: em CONFIG, a UF preferida e a faixa de valor.</li>
-      <li><span class="mono">pops/</span> e este painel trazem os nomes do PAB. Troque pelos da sua equipe.</li></ul></div>
+      <li><span class="mono">pops/</span> e este painel usam cargos genéricos (closer, SDR, responsável técnico). Ponha os nomes da sua equipe.</li></ul></div>
     <div class="card tinted" style="--c:var(--crit)"><h2>O que não vem no kit</h2><ul style="margin:0;padding-left:18px;font-size:14px">
       <li>Aulas e modelos originais da Mentoria CRT (curso pago de terceiros).</li>
       <li>Listas de leads e relatórios de empresas reais: o motor gera a sua na sua máquina.</li>
@@ -690,7 +693,7 @@ const VIEWS = {
       <tr><td>Não ajuizada (antes da execução)</td><td class="mono">até 25</td></tr>
       <tr><td>Inscrição recente</td><td class="mono">15</td></tr>
       <tr><td>Faixa de R$ 100 mil a R$ 1 milhão</td><td class="mono">15</td></tr>
-      <tr><td>Empresa de SP</td><td class="mono">10</td></tr>
+      <tr><td>Empresa da UF preferida</td><td class="mono">10</td></tr>
       <tr><td>3 ou mais inscrições</td><td class="mono">5</td></tr></tbody></table></div></div>
     <div class="card"><h2>Rotina</h2><ol style="margin:0;padding-left:18px">
       <li>Confere se saiu trimestre novo e baixa.</li><li>Soma a dívida por CNPJ (só PJ devedora principal, sem órgãos públicos, falidas e em recuperação).</li>
@@ -699,30 +702,30 @@ const VIEWS = {
   </div>`; },
 
  ferramentas(){ const f=[
-   ['Lista de leads','Motor PGFN: dados abertos por trimestre, faixa de dívida, UF, telefone pela BrasilAPI','pronto'],
-   ['Primeiro contato','WhatsApp D-API com robô SDR no molde do Otto e do Sebastião','adaptar'],
-   ['Funil','CRM do Sistema PAB, quadro "PAB Tributário", dona do lead','criar'],
-   ['Ligação','Discador do WhatsApp do sistema, com redutor de ruído','pronto'],
-   ['Reuniões','Google Meet + convite automático','pronto'],
-   ['Contrato, NDA, procuração','Timbrado PAB + ZapSign pela VPS','adaptar'],
-   ['Diagnóstico fiscal','Agente de passivo fiscal: lê e-CAC e Regularize, gera relatório','trazer'],
-   ['Peças','Modelos da mentoria + IA de peças no timbrado + Valentina','adaptar'],
-   ['Prazos e editais','Controladoria (SYNC) + tarefa por edital aberto','adaptar'],
-   ['Cobrança','Financeiro próprio: Asaas e comissões','pronto'],
-   ['Agentes da equipe','Lua, Maya, Neo e Sol com os POPs no cérebro','reindexar']];
-  const cls={pronto:'ok',criar:'crit',trazer:'warn',adaptar:'warn',reindexar:'warn'};
-  return `<div class="eyebrow">O que já temos</div><h1>Quase tudo já existe no PAB</h1><p class="lead">Faltam três peças: o quadro tributário no CRM, o agente de passivo fiscal trazido para o PAB e o contrato tributário no timbrado.</p>
-  <div class="grid g3">${f.map(([e,d,s])=>`<div class="card"><div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><h3>${e}</h3><span class="pill ${cls[s]}">${s}</span></div><p class="muted" style="margin:8px 0 0;font-size:13.5px">${d}</p></div>`).join('')}</div>
-  <div class="card tinted section" style="--c:var(--green)"><h3>Material da mentoria</h3><p class="muted" style="margin:6px 0 0">41 aulas, 9 POPs e 16 modelos na pasta do Drive <a href="https://drive.google.com/drive/folders/1BKzDyW4wfJ3iQtWnF58DomkRvweiYNu8" target="_blank" rel="noopener">EXPANSÃO PAB TRIBUTÁRIO</a>.</p></div>`; },
+   ['Lista de leads','motor/: dados abertos da PGFN, nota de 0 a 100 e telefone pela BrasilAPI','no kit'],
+   ['Raio-x para a R1','consulta/: cadastro, sócios e inscrições num HTML','no kit'],
+   ['Triagem da conversa','skill triagem-tributaria no Claude Code','no kit'],
+   ['Diagnóstico fiscal','ia/: relatório de passivo a partir dos PDFs do e-CAC e do Regularize','no kit'],
+   ['CAPAG','capag/ + agente avaliador-capag (e a tela deste painel)','no kit'],
+   ['Peças','agente peca-tributaria + teses/ + leis/','no kit'],
+   ['Primeiro contato','WhatsApp com robô SDR e uma SDR humana','montar'],
+   ['Funil','qualquer CRM com o quadro "Tributário" e um dono por card','montar'],
+   ['Contrato e procuração','timbrado do escritório + assinatura digital','montar'],
+   ['Prazos e editais','agenda do escritório + tarefa por edital aberto','montar'],
+   ['Reuniões','Google Meet ou Zoom com convite automático','comum'],
+   ['Cobrança','financeiro do escritório: fixo parcelado e êxito','comum']];
+  const cls={'no kit':'ok',comum:'ok',montar:'warn'};
+  return `<div class="eyebrow">O que vem pronto e o que montar</div><h1>A parte técnica já vem no kit</h1><p class="lead">Seis peças estão prontas neste repositório. O resto é ferramenta comum de escritório: WhatsApp, CRM, assinatura digital e agenda.</p>
+  <div class="grid g3">${f.map(([e,d,s])=>`<div class="card"><div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><h3>${e}</h3><span class="pill ${cls[s]}">${s}</span></div><p class="muted" style="margin:8px 0 0;font-size:13.5px">${d}</p></div>`).join('')}</div>`; },
 
  decisoes(){ const d=guarda('decisoes')||[]; return `
-  <div class="eyebrow">Para o Weverton e a Pamella</div>
+  <div class="eyebrow">Para os sócios</div>
   <h1>Nove decisões antes de ir a campo</h1>
   <p class="lead">As duas primeiras travam o resto. Marque o que já foi decidido; a marcação fica só no seu navegador.</p>
   <div class="card"><ul class="check" id="decs">${DECISOES.map((x,i)=>`<li><input type="checkbox" class="chk" id="dec-${i}" data-dec="${i}" ${d[i]?'checked':''}><label for="dec-${i}">${esc(x)}</label></li>`).join('')}</ul></div>
   <div class="section"><h2>Primeiros 90 dias</h2><div class="timeline">
-   <div class="card" style="--c:var(--violet)"><span class="pill" style="--c:var(--violet)">DIAS 1 A 30</span><h3 style="margin-top:10px">Montar</h3><ul><li>Quadro no CRM</li><li>Contrato, NDA, procuração e parecer no timbrado</li><li>Agente de passivo fiscal no PAB</li><li>Equipe assiste aos módulos 2, 3 e 4</li><li>Um caso-piloto do começo ao fim</li></ul></div>
-   <div class="card" style="--c:var(--amber)"><span class="pill" style="--c:var(--amber)">DIAS 31 A 60</span><h3 style="margin-top:10px">Vender</h3><ul><li>Lista do Motor PGFN: R$ 100 mil a 1 mi, SP</li><li>Robô SDR no horário comercial</li><li>R1 e R2 com o Weverton</li><li>Medir cada conversão</li></ul></div>
+   <div class="card" style="--c:var(--violet)"><span class="pill" style="--c:var(--violet)">DIAS 1 A 30</span><h3 style="margin-top:10px">Montar</h3><ul><li>Quadro no CRM</li><li>Contrato, NDA, procuração e parecer no timbrado</li><li>Rodar o kit num caso real: raio-x, passivo e CAPAG</li><li>Equipe estuda o método e os POPs</li><li>Um caso-piloto do começo ao fim</li></ul></div>
+   <div class="card" style="--c:var(--amber)"><span class="pill" style="--c:var(--amber)">DIAS 31 A 60</span><h3 style="margin-top:10px">Vender</h3><ul><li>Lista do motor: R$ 100 mil a 1 mi, na sua UF</li><li>Robô SDR no horário comercial</li><li>R1 e R2 com o sócio closer</li><li>Medir cada conversão</li></ul></div>
    <div class="card" style="--c:var(--teal)"><span class="pill" style="--c:var(--teal)">DIAS 61 A 90</span><h3 style="margin-top:10px">Escalar</h3><ul><li>Campanha paga</li><li>Parceria com contadores</li><li>Plano anual de acompanhamento</li><li>POPs no cérebro dos agentes</li><li>Meta mensal com números reais</li></ul></div>
   </div></div>`; }
 };
@@ -993,7 +996,7 @@ function ondas(){
 function depois(id){ if(id==='inicio') ondas(); if(id==='teses'){ desenhaFiltros(); desenhaTeses(); } if(id==='leis') desenhaLeis(); if(id==='capag') iniciaCap(); $('#stage').focus({preventScroll:true}); }
 
 $('#tema').addEventListener('click', () => {
-  const r = document.documentElement, escuro = r.dataset.theme ? r.dataset.theme==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  const r = document.documentElement, escuro = r.dataset.theme !== 'light';
   r.dataset.theme = escuro ? 'light' : 'dark'; guarda('tema', r.dataset.theme); if(atual==='inicio') ondas();
 });
 (() => { const t = guarda('tema'); if(t) document.documentElement.dataset.theme = t; })();
