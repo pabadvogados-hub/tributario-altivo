@@ -1,0 +1,135 @@
+[
+ {
+  "sigla": "CTN",
+  "nome": "Codigo Tributario Nacional - Lei 5.172/1966",
+  "uso": "prescricao (174), decadencia (150 par.4 e 173), fraude (185), responsabilidade (134/135), CDA (202/203)",
+  "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "LEF",
+  "nome": "Lei de Execucoes Fiscais - Lei 6.830/1980",
+  "uso": "execucao fiscal, prescricao intercorrente (40), garantia, embargos",
+  "url": "https://www.planalto.gov.br/ccivil_03/leis/l6830.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L13988",
+  "nome": "Lei da Transacao Tributaria - Lei 13.988/2020",
+  "uso": "transacao por adesao e individual, descontos, prazos, rescisao e impedimento",
+  "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l13988.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L10522",
+  "nome": "Lei 10.522/2002 (CADIN, parcelamentos)",
+  "uso": "parcelamento convencional, entrada do reparcelamento (14-A), NJP (19)",
+  "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10522.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L11941",
+  "nome": "Lei 11.941/2009",
+  "uso": "origem do art. 14-A (reparcelamento)",
+  "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l11941.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L13496",
+  "nome": "Lei 13.496/2017 (PERT)",
+  "uso": "PERT: conta como parcelamento anterior",
+  "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13496.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "DL147",
+  "nome": "Decreto-Lei 147/1967 (Lei Organica da PGFN)",
+  "uso": "art. 22: dever de remessa dos debitos a PGFN (base do MS de remessa)",
+  "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0147.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L9784",
+  "nome": "Lei 9.784/1999 (Processo Administrativo Federal)",
+  "uso": "arts. 48-50: dever de decidir em 30 dias (omissao no pedido de remessa)",
+  "url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L12016",
+  "nome": "Lei 12.016/2009 (Mandado de Seguranca)",
+  "uso": "cabimento, autoridade coatora, liminar (7, III)",
+  "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12016.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "LC123",
+  "nome": "Lei Complementar 123/2006 (Simples Nacional)",
+  "uso": "exclusao do Simples, parcelamento do Simples (21 par.15-24), reingresso",
+  "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp123.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "PAF",
+  "nome": "Decreto 70.235/1972 (Processo Administrativo Fiscal)",
+  "uso": "impugnacao, prazos, contencioso administrativo",
+  "url": "https://www.planalto.gov.br/ccivil_03/decreto/d70235cons.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L8137",
+  "nome": "Lei 8.137/1990 (crimes contra a ordem tributaria)",
+  "uso": "risco penal: apropriacao (2, II)",
+  "url": "https://www.planalto.gov.br/ccivil_03/leis/l8137.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L10684",
+  "nome": "Lei 10.684/2003",
+  "uso": "art. 9: suspensao da pretensao punitiva com parcelamento",
+  "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.684.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "L14375",
+  "nome": "Lei 14.375/2022 (alterou a 13.988)",
+  "uso": "ampliacao da transacao: prejuizo fiscal, prazo de 120 meses",
+  "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14375.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "CPC",
+  "nome": "Codigo de Processo Civil - Lei 13.105/2015",
+  "uso": "tutela de urgencia (294, 300), negocio juridico processual (190), agravo (1.015)",
+  "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "PORT6757",
+  "nome": "Portaria PGFN 6.757/2022 (regulamenta a transacao)",
+  "uso": "CAPAG presumida e efetiva (arts. 20-31), irreversibilidade (30), impedimento (64)",
+  "url": "https://www.normaslegais.com.br/legislacao/portaria-pgfn-6757-2022.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "PORT448",
+  "nome": "Portaria PGFN 448/2019 (parcelamento na PGFN)",
+  "uso": "art. 17: entrada do reparcelamento por inscricao; separacao (7)",
+  "url": "https://www.normaslegais.com.br/legislacao/portaria-pgfn-448-2019.htm",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "PORTMF447",
+  "nome": "Portaria MF 447/2018 (prazo de remessa a PGFN)",
+  "uso": "art. 2: 90 dias na RFB para encaminhar a PGFN",
+  "url": "https://www.legisweb.com.br/legislacao/?id=368654",
+  "baixado_em": "2026-11-06"
+ },
+ {
+  "sigla": "PORT742",
+  "nome": "Portaria PGFN 742/2018 (negocio juridico processual)",
+  "uso": "NJP: alternativa quando ha impedimento de transacao",
+  "url": "https://www.legisweb.com.br/legislacao/?id=373099",
+  "baixado_em": "2026-11-06"
+ }
+]
