@@ -13,7 +13,7 @@
     - Prescrição (CTN art. 174; Tema 566 do STJ para a intercorrente)
     - Decadência
     - Nulidades da CDA
-    - Impedimento de 2 anos por transação rescindida (art. 64, I, Portaria 6.757)
+    - Impedimento de 2 anos por transação rescindida (art. 18 da Portaria 6.757)
     - Elegibilidade ao edital vigente
     - CAPAG presumida contra a efetiva
     - Execuções fiscais

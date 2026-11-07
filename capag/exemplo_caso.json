@@ -1,0 +1,33 @@
+{
+  "_leia": "Caso ficticio. Valores do Regularize (CAPAG presumida, faixa) e do contador (fluxo de caixa). Datas em AAAA-MM-DD.",
+  "empresa": "Transportes Exemplo Ltda",
+  "cnpj": "00.000.000/0001-00",
+  "faixa_atual": "B",
+  "capag_presumida_valor": 1800000,
+  "data_ciencia_capag": "2026-11-01",
+  "passivo_total": 2400000,
+  "fluxo_caixa_livre_anual": [140000, 95000, 120000],
+  "capacidade_estimada_5anos": null,
+  "pedido_anterior_julgado": false,
+  "fato_superveniente": "",
+  "mudanca_substancial_presumida": false,
+  "dfc_metodo": "indireto",
+  "situacao_cadastral": "ATIVA",
+  "recuperacao_judicial": false,
+  "falencia": false,
+  "documentos": {
+    "laudo": false,
+    "balanco": true,
+    "dre": true,
+    "dfc": true,
+    "bens": false,
+    "credores": false,
+    "extratos": false,
+    "operacoes_credito": false
+  },
+  "creditos": [
+    {"inscricao": "80 6 09 000001-01", "data_inscricao": "2009-03-10", "garantia_ou_suspensao": false},
+    {"inscricao": "80 2 21 000002-02", "data_inscricao": "2021-08-02", "garantia_ou_suspensao": false},
+    {"inscricao": "80 7 15 000003-03", "data_inscricao": "2015-05-20", "execucao_arquivada_art40_desde": "2021-02-01"}
+  ]
+}

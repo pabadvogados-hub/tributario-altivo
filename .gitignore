@@ -1,5 +1,8 @@
 motor/data/
 motor/leads/
+consulta/saida/
+capag/casos/
+parecer_capag*.md
 __pycache__/
 *.pyc
 .env
